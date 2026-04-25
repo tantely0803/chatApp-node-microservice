@@ -1,0 +1,35 @@
+{
+  "name": "chatapp-node-microservice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "npm -r --workspaces-root=false run test",
+    "build": "npm -r --workspaces-root=false run build",
+    "dev": "npm -r --workspaces-root=false run dev",
+    "lint": "npm -r --workspaces-root=false run lint",
+    "format": "npm -r --workspaces-root=false run format"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "workspaces": [
+    "services/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.6.0",
+    "@typescript-eslint/eslint-plugin": "^8.59.0",
+    "@typescript-eslint/parser": "^8.59.0",
+    "eslint": "^10.2.1",
+    "prettier": "^3.8.3",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "common": "^0.2.5",
+    "pino": "^10.3.1",
+    "zod": "^4.3.6"
+  }
+}
