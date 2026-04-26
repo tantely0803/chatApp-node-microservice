@@ -25,3 +25,6 @@
 ## package user-service
 - npm install cors express helmet 
 -  npm install dotenv
+
+## package chat-service
+- npm install ampqlib cors express helmet ioredis jsonwebtoken mongodb socket.io 
