@@ -4,6 +4,8 @@ import helmet from 'helmet';
 import { errorHandler } from '@/middleware/error-handler';
 import { createInternalAuthMiddleware } from '@chatapp-node-microservice/common';
 import { env } from './config/env';
+import { register } from 'node:module';
+import { registerRoutes } from './routes';
 
 
 export const createApp = (): Application => {
@@ -24,6 +26,8 @@ export const createApp = (): Application => {
       exemptPaths: ['/health'],
     }),
   );
+
+  registerRoutes(app);
 
   app.use((_req, res) => {
     res.status(404).json({ message: 'Not Found' });
