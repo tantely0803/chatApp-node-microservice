@@ -198,3 +198,15 @@ services:
       retries: 3
       start_period: 40s
     restart: unless-stopped
+
+volumes:
+  user-db-data:
+  mongo-data:
+  auth-db-data:
+  redis-data:
+  rabbitmq-data:
+
+
+networks:
+  chatapp-network:
+    driver: bridge
